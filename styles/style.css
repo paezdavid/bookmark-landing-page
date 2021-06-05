@@ -587,6 +587,9 @@ footer {
     min-height: 12.5rem;
     height: 100%;
   }
+  .accordion-btn {
+    text-align: left;
+  }
   form {
     display: -webkit-box;
     display: -ms-flexbox;
