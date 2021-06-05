@@ -1,0 +1,195 @@
+
+$soft-blue: hsl(231, 69%, 60%)
+$soft-red: hsl(0, 94%, 66%)
+$grayish-blue: hsl(229, 8%, 60%)
+$very-dark-blue: hsl(229, 31%, 21%)
+$font-size: 18px
+
+@mixin flexAlign($direction)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: $direction
+    
+@mixin button($backgroundColor)
+    border: none
+    border-radius: 5px
+    padding: .7em 1.5em
+    background-color: $backgroundColor
+    
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Rubik', sans-serif;
+    position: relative
+
+.centerWrapper
+    margin: 0 auto
+    max-width: 1440px
+
+section
+    position: relative
+
+.sections-paragraph
+    text-align: center
+    padding: 1em 1em
+    margin: 0 auto
+    max-width: 28em
+    h2
+        margin-bottom: .7em
+
+@import "./_header"
+@import "./_mainSection"
+@import "./_featuresSection"
+@import "./_cards"
+@import "./_accordion"
+@import "./_formSection"
+@import "./_footer"
+
+.mobile-nav-btn-section
+    display: none
+
+.mobile-nav
+    position: absolute
+    top: 0
+    right: 0
+    background-color: $very-dark-blue
+    width: 100%
+    height: 100vh
+    z-index: 10
+    padding: 1.2rem
+    transform: translateY(-100vh)
+    transition: .5s
+    opacity: 0.9
+    display: none
+
+.mobile-nav-header
+    display: flex
+    justify-content: space-between
+    padding: 1.2rem 0
+
+.mobile-nav-links
+    text-align: center
+
+.mobile-nav-footer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.mobile-nav-footer
+    .footer-ssmm
+        width: auto
+        padding-top: 3rem
+        #fbIcon
+            margin-right: 0
+
+
+
+@media (max-width: 975px)
+    .mobile-nav
+        display: block
+    .nav
+        display: none
+    .mobile-nav-btn-section
+        display: block
+    .navLinks
+        display: block
+        padding: 1rem
+        margin: 0
+        border-top: 1px solid white
+        color: white
+        &:hover
+            color: white
+
+    .main-section
+        display: flex
+        flex-direction: column-reverse
+    .hero-text
+        width: 90%
+        a
+            display: block
+            margin-right: 0
+            text-align: center
+            margin-bottom: 1rem
+    .main-img
+        width: 90%
+    .background-style
+        top: 15%
+        
+    .tabButtons
+        display: flex
+        flex-direction: column
+        border: none
+        width: auto
+        padding: 1rem
+        span
+            padding: 1rem
+            border-top: 1px solid black
+            margin: 0
+            &:last-child
+                border-bottom: 1px solid black
+    
+    
+    .active
+        flex-direction: column
+    .features-text
+        width: 90%
+        margin-top: 1rem
+        padding: 0
+    .cards-section
+        flex-direction: column
+    .card
+        margin-bottom: 1.5rem
+    .faqSection
+        padding: 2rem
+
+    .active-accordion
+        min-height: 12.5rem
+        height: 100%
+
+    form
+        display: flex
+        flex-direction: column
+    #email-input
+        width: 100%
+        margin-right: 0
+        margin-bottom: 1rem
+    #submit-email
+        width: 100%
+
+    .footer-section
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        .footer-ssmm
+            width: 80%
+            display: flex
+            justify-content: space-around
+            padding: 1rem
+            a
+                margin: 0
+    .footer-nav
+        display: flex
+        flex-direction: column
+        a
+            padding: 1rem
+            margin: 0
+            border-bottom: 1px solid white
+            color: white
+            &:hover
+                color: white
+
+
+
+@media (max-width: 300px)
+    .hero-text
+        width: auto
+    .card
+        a
+            padding: .7em

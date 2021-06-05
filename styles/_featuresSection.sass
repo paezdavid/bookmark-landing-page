@@ -1,0 +1,48 @@
+
+.tabButtons
+    margin: 0 auto
+    padding: 1em 0
+    width: 40em
+    text-align: center
+    border-bottom: 1px solid black
+    span
+        &:hover
+            color: $soft-red
+
+.tabs-container 
+    width: 100%
+    margin: 0 auto
+    
+
+.features-text
+    width: 50%
+    padding-right: 4em
+    margin-left: 1em
+    p
+        line-height: 1.5
+        font-size: $font-size
+
+span 
+    margin-right: 3em
+    
+span:hover
+    text-decoration: underline
+    cursor: pointer 
+
+.tab 
+    width: 100%
+    min-height: 520px
+    padding: 3em
+    h2
+        font-size: 2.250em
+        margin-bottom: .7em
+    p
+        font-size: $font-size
+        line-height: 1.5
+
+.none
+    display: none
+
+.active
+    @include flexAlign(row)
+    

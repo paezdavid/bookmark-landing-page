@@ -1,0 +1,17 @@
+header
+    @include flexAlign(row)
+    padding: 2em
+    .loginBTN
+        @include button($soft-red)
+
+.navLinks
+    color: black
+    text-decoration: none
+    margin-right: 25px
+    text-transform: uppercase
+    &:hover
+        text-decoration: underline
+        color: $soft-red
+    &:last-child:hover
+        color: white
+            

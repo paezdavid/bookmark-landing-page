@@ -1,0 +1,26 @@
+.cards-section
+    @include flexAlign(row)
+    justify-content: space-evenly
+    padding: 1em 0
+    min-height: 500px
+    position: relative
+
+.card 
+    text-align: center
+    border-radius: 10px
+    padding: 3em 2em
+    box-shadow: 0px 0px 8px 1px $grayish-blue
+    h4
+        margin: .5em 0
+    p
+        margin-bottom: 2em
+    a
+        @include button($soft-blue)
+        color: white
+        text-decoration: none
+        border: 1px solid $soft-blue
+        &:hover
+            border: 1px solid $soft-blue
+            color: $soft-blue
+            background-color: white
+    
